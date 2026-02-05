@@ -1,1 +1,1 @@
-# collaborative-markdown-editor-test
+This repo contains the results of experiments where I LLMs to code a lightwieght collaborative markdown editor. The hypothesis I was testing was the following: "Using powerfull model for planning and a weaker model for plan execution is no worse than using a powerful model for both planning and execution"
