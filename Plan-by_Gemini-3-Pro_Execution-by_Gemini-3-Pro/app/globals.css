@@ -1,0 +1,139 @@
+@import 'tailwindcss';
+
+:root {
+  color-scheme: dark;
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #252526;
+  --bg-tertiary: #2d2d30;
+  --border: #3c3c3c;
+  --text-primary: #d4d4d4;
+  --text-secondary: #858585;
+  --accent-blue: #007acc;
+  --accent-green: #4ec9b0;
+  --success: #89d185;
+  --warning: #cca700;
+  --error: #f14c4c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-body), system-ui, sans-serif;
+  letter-spacing: 0.01em;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display), serif;
+}
+
+code,
+pre,
+textarea {
+  font-family:
+    var(--font-mono), ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono',
+    'Courier New', monospace;
+}
+
+.markdown-preview h1 {
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.markdown-preview h2 {
+  font-size: 1.4rem;
+  margin: 0;
+}
+
+.markdown-preview h3 {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.markdown-preview p {
+  color: var(--text-primary);
+}
+
+.markdown-preview a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
+.markdown-preview pre {
+  margin: 0;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #0f1116;
+  border: 1px solid #1d2230;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.markdown-preview code {
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.1rem 0.35rem;
+  border-radius: 6px;
+}
+
+.markdown-preview pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.markdown-preview ul,
+.markdown-preview ol {
+  padding-left: 1.4rem;
+  margin: 0;
+}
+
+.markdown-preview blockquote {
+  margin: 0;
+  padding: 0.6rem 1rem;
+  border-left: 3px solid var(--accent-blue);
+  background: rgba(0, 122, 204, 0.1);
+  color: var(--text-secondary);
+}
+
+.markdown-preview hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
+
+.markdown-preview img {
+  max-width: 100%;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4f;
+}
+
+::selection {
+  background: rgba(0, 122, 204, 0.35);
+}
