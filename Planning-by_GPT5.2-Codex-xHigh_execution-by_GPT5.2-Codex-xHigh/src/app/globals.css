@@ -1,0 +1,170 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #1e1e1e;
+  --bg-secondary: #252526;
+  --bg-tertiary: #2d2d30;
+  --border: #3c3c3c;
+  --text-primary: #d4d4d4;
+  --text-secondary: #858585;
+  --accent-blue: #007acc;
+  --accent-green: #4ec9b0;
+  --success: #89d185;
+  --warning: #cca700;
+  --error: #f14c4c;
+  --glow: rgba(0, 122, 204, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 10%, rgba(0, 122, 204, 0.15), transparent 40%),
+    radial-gradient(circle at 90% 20%, rgba(78, 201, 176, 0.12), transparent 45%),
+    radial-gradient(circle at 20% 90%, rgba(204, 167, 0, 0.1), transparent 40%);
+  opacity: 0.6;
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+::selection {
+  background: rgba(0, 122, 204, 0.35);
+}
+
+:focus-visible {
+  outline: 2px solid rgba(0, 122, 204, 0.7);
+  outline-offset: 2px;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--bg-tertiary);
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4a4a4f;
+}
+
+.markdown {
+  font-family: var(--font-sans), system-ui, sans-serif;
+  line-height: 1.7;
+  color: var(--text-primary);
+}
+
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  font-family: var(--font-display), serif;
+  letter-spacing: -0.02em;
+  margin: 1.4em 0 0.6em;
+}
+
+.markdown h1 {
+  font-size: 2rem;
+}
+
+.markdown h2 {
+  font-size: 1.6rem;
+}
+
+.markdown h3 {
+  font-size: 1.3rem;
+}
+
+.markdown p {
+  margin: 0 0 1rem;
+  color: var(--text-primary);
+}
+
+.markdown a {
+  color: var(--accent-green);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.markdown a:hover {
+  border-color: var(--accent-green);
+}
+
+.markdown ul,
+.markdown ol {
+  margin: 0 0 1rem 1.5rem;
+  padding: 0;
+}
+
+.markdown li {
+  margin: 0.35rem 0;
+}
+
+.markdown blockquote {
+  margin: 0 0 1.2rem;
+  padding: 0.5rem 1rem;
+  border-left: 3px solid var(--accent-blue);
+  background: rgba(0, 122, 204, 0.12);
+}
+
+.markdown code {
+  font-family: var(--font-mono), ui-monospace, SFMono-Regular, monospace;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 0.1rem 0.35rem;
+  border-radius: 6px;
+  font-size: 0.9em;
+}
+
+.markdown pre {
+  background: #111214;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  overflow: auto;
+  margin: 0 0 1.2rem;
+}
+
+.markdown pre code {
+  background: transparent;
+  padding: 0;
+}
+
+.markdown hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 1.5rem 0;
+}
